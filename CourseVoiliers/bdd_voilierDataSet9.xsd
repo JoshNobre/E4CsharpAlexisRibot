@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bdd_voilierDataSet9" targetNamespace="http://tempuri.org/bdd_voilierDataSet9.xsd" xmlns:mstns="http://tempuri.org/bdd_voilierDataSet9.xsd" xmlns="http://tempuri.org/bdd_voilierDataSet9.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bdd_voilierConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bdd_voilierConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CourseVoiliers.Properties.Settings.GlobalReference.Default.bdd_voilierConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClassementGeneralTableAdapter" GeneratorDataComponentClassName="ClassementGeneralTableAdapter" Name="ClassementGeneral" UserDataComponentName="ClassementGeneralTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdd_voilierConnectionString (Settings)" DbObjectName="bdd_voilier.dbo.ClassementGeneral" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Nom_Voilier, Id_Course, [Temps réel] FROM dbo.ClassementGeneral</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nom_Voilier" DataSetColumn="Nom_Voilier" />
+              <Mapping SourceColumn="Id_Course" DataSetColumn="Id_Course" />
+              <Mapping SourceColumn="Temps réel" DataSetColumn="Temps réel" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bdd_voilierDataSet9" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bdd_voilierDataSet9" msprop:Generator_UserDSName="bdd_voilierDataSet9">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ClassementGeneral" msprop:Generator_TableClassName="ClassementGeneralDataTable" msprop:Generator_TableVarName="tableClassementGeneral" msprop:Generator_TablePropName="ClassementGeneral" msprop:Generator_RowDeletingName="ClassementGeneralRowDeleting" msprop:Generator_RowChangingName="ClassementGeneralRowChanging" msprop:Generator_RowEvHandlerName="ClassementGeneralRowChangeEventHandler" msprop:Generator_RowDeletedName="ClassementGeneralRowDeleted" msprop:Generator_UserTableName="ClassementGeneral" msprop:Generator_RowChangedName="ClassementGeneralRowChanged" msprop:Generator_RowEvArgName="ClassementGeneralRowChangeEvent" msprop:Generator_RowClassName="ClassementGeneralRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nom_Voilier" msprop:Generator_ColumnVarNameInTable="columnNom_Voilier" msprop:Generator_ColumnPropNameInRow="Nom_Voilier" msprop:Generator_ColumnPropNameInTable="Nom_VoilierColumn" msprop:Generator_UserColumnName="Nom_Voilier" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id_Course" msprop:Generator_ColumnVarNameInTable="columnId_Course" msprop:Generator_ColumnPropNameInRow="Id_Course" msprop:Generator_ColumnPropNameInTable="Id_CourseColumn" msprop:Generator_UserColumnName="Id_Course" type="xs:int" />
+              <xs:element name="Temps_x0020_réel" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTemps_réel" msprop:Generator_ColumnPropNameInRow="Temps_réel" msprop:Generator_ColumnPropNameInTable="Temps_réelColumn" msprop:Generator_UserColumnName="Temps réel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

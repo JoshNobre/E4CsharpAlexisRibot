@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A6266FD-B941-43D2-9BF0-AA293587CB19}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CourseVoiliers</RootNamespace>
+    <AssemblyName>CourseVoiliers</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttribuerPenalite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttribuerPenalite.Designer.cs">
+      <DependentUpon>AttribuerPenalite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet10.cs">
+      <DependentUpon>bdd_voilierDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet_ALL.cs">
+      <DependentUpon>bdd_voilierDataSet_ALL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet_ALL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet_ALL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdd_voilierDataSet_FINAL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_voilierDataSet_FINAL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Classement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classement.Designer.cs">
+      <DependentUpon>Classement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassementGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassementGen.Designer.cs">
+      <DependentUpon>ClassementGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course.Designer.cs">
+      <DependentUpon>Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entreprise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entreprise.Designer.cs">
+      <DependentUpon>Entreprise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Epreuve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Epreuve.Designer.cs">
+      <DependentUpon>Epreuve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConnexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConnexion.Designer.cs">
+      <DependentUpon>FormConnexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionAttributionPenalite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionAttributionPenalite.Designer.cs">
+      <DependentUpon>GestionAttributionPenalite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCourse.Designer.cs">
+      <DependentUpon>GestionCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionEntreprise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionEntreprise.Designer.cs">
+      <DependentUpon>GestionEntreprise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionEpreuve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionEpreuve.Designer.cs">
+      <DependentUpon>GestionEpreuve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPenalite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPenalite.Designer.cs">
+      <DependentUpon>GestionPenalite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPersonne.Designer.cs">
+      <DependentUpon>GestionPersonne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSponsor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSponsor.Designer.cs">
+      <DependentUpon>GestionSponsor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionVEC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionVEC.Designer.cs">
+      <DependentUpon>GestionVEC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionVoilier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionVoilier.Designer.cs">
+      <DependentUpon>GestionVoilier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penalite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penalite.Designer.cs">
+      <DependentUpon>Penalite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personne.Designer.cs">
+      <DependentUpon>Personne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VEC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VEC.Designer.cs">
+      <DependentUpon>VEC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Voilier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voilier.Designer.cs">
+      <DependentUpon>Voilier.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AttribuerPenalite.resx">
+      <DependentUpon>AttribuerPenalite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classement.resx">
+      <DependentUpon>Classement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassementGen.resx">
+      <DependentUpon>ClassementGen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course.resx">
+      <DependentUpon>Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entreprise.resx">
+      <DependentUpon>Entreprise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Epreuve.resx">
+      <DependentUpon>Epreuve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConnexion.resx">
+      <DependentUpon>FormConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionAttributionPenalite.resx">
+      <DependentUpon>GestionAttributionPenalite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCourse.resx">
+      <DependentUpon>GestionCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionEntreprise.resx">
+      <DependentUpon>GestionEntreprise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionEpreuve.resx">
+      <DependentUpon>GestionEpreuve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPenalite.resx">
+      <DependentUpon>GestionPenalite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonne.resx">
+      <DependentUpon>GestionPersonne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSponsor.resx">
+      <DependentUpon>GestionSponsor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionVEC.resx">
+      <DependentUpon>GestionVEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionVoilier.resx">
+      <DependentUpon>GestionVoilier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penalite.resx">
+      <DependentUpon>Penalite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personne.resx">
+      <DependentUpon>Personne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="VEC.resx">
+      <DependentUpon>VEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voilier.resx">
+      <DependentUpon>Voilier.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bdd_voilierDataSet.xsc">
+      <DependentUpon>bdd_voilierDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet.xss">
+      <DependentUpon>bdd_voilierDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet1.xsc">
+      <DependentUpon>bdd_voilierDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet1.xss">
+      <DependentUpon>bdd_voilierDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet10.xsc">
+      <DependentUpon>bdd_voilierDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet10.xss">
+      <DependentUpon>bdd_voilierDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet11.xsc">
+      <DependentUpon>bdd_voilierDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet11.xss">
+      <DependentUpon>bdd_voilierDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet2.xsc">
+      <DependentUpon>bdd_voilierDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet2.xss">
+      <DependentUpon>bdd_voilierDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet3.xsc">
+      <DependentUpon>bdd_voilierDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet3.xss">
+      <DependentUpon>bdd_voilierDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet4.xsc">
+      <DependentUpon>bdd_voilierDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet4.xss">
+      <DependentUpon>bdd_voilierDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet5.xsc">
+      <DependentUpon>bdd_voilierDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet5.xss">
+      <DependentUpon>bdd_voilierDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet6.xsc">
+      <DependentUpon>bdd_voilierDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet6.xss">
+      <DependentUpon>bdd_voilierDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet7.xsc">
+      <DependentUpon>bdd_voilierDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet7.xss">
+      <DependentUpon>bdd_voilierDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet8.xsc">
+      <DependentUpon>bdd_voilierDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet8.xss">
+      <DependentUpon>bdd_voilierDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet9.xsc">
+      <DependentUpon>bdd_voilierDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet9.xss">
+      <DependentUpon>bdd_voilierDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet_ALL.xsc">
+      <DependentUpon>bdd_voilierDataSet_ALL.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet_ALL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet_ALL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet_ALL.xss">
+      <DependentUpon>bdd_voilierDataSet_ALL.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet_FINAL.xsc">
+      <DependentUpon>bdd_voilierDataSet_FINAL.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_voilierDataSet_FINAL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_voilierDataSet_FINAL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_voilierDataSet_FINAL.xss">
+      <DependentUpon>bdd_voilierDataSet_FINAL.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
