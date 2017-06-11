@@ -19,6 +19,8 @@ namespace CourseVoiliers
 
         private void GestionEntreprise_Load(object sender, EventArgs e)
         {
+            // TODO: cette ligne de code charge les données dans la table 'bdd_voilierDataSet_FINAL.VOILIER'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.vOILIERTableAdapter.Fill(this.bdd_voilierDataSet_FINAL.VOILIER);
             // TODO: cette ligne de code charge les données dans la table 'bdd_voilierDataSet.ENTREPRISE'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.eNTREPRISETableAdapter.Fill(this.bdd_voilierDataSet.ENTREPRISE);
 

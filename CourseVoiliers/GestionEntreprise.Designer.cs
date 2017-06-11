@@ -51,11 +51,16 @@
             this.eNTREPRISETableAdapter = new CourseVoiliers.bdd_voilierDataSetTableAdapters.ENTREPRISETableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bdd_voilierDataSet_FINAL = new CourseVoiliers.bdd_voilierDataSet_FINAL();
+            this.vOILIERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vOILIERTableAdapter = new CourseVoiliers.bdd_voilierDataSet_FINALTableAdapters.VOILIERTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorEntreprise)).BeginInit();
             this.bindingNavigatorEntreprise.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntreprise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdd_voilierDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdd_voilierDataSet_FINAL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vOILIERBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigatorEntreprise
@@ -240,20 +245,38 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 5;
             // 
-            // textBox3
+            // comboBox1
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceEntreprise, "Id_Voilier", true));
-            this.textBox3.Location = new System.Drawing.Point(167, 161);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bindingSourceEntreprise, "Id_Voilier", true));
+            this.comboBox1.DataSource = this.vOILIERBindingSource;
+            this.comboBox1.DisplayMember = "Nom_Voilier";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(167, 161);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 7;
+            this.comboBox1.ValueMember = "Id_Voilier";
+            // 
+            // bdd_voilierDataSet_FINAL
+            // 
+            this.bdd_voilierDataSet_FINAL.DataSetName = "bdd_voilierDataSet_FINAL";
+            this.bdd_voilierDataSet_FINAL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vOILIERBindingSource
+            // 
+            this.vOILIERBindingSource.DataMember = "VOILIER";
+            this.vOILIERBindingSource.DataSource = this.bdd_voilierDataSet_FINAL;
+            // 
+            // vOILIERTableAdapter
+            // 
+            this.vOILIERTableAdapter.ClearBeforeFill = true;
             // 
             // GestionEntreprise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(340, 260);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
@@ -261,13 +284,15 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bindingNavigatorEntreprise);
             this.Name = "GestionEntreprise";
-            this.Text = "GestionEntreprise";
+            this.Text = "Gestion des sponsors";
             this.Load += new System.EventHandler(this.GestionEntreprise_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorEntreprise)).EndInit();
             this.bindingNavigatorEntreprise.ResumeLayout(false);
             this.bindingNavigatorEntreprise.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntreprise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdd_voilierDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdd_voilierDataSet_FINAL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vOILIERBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,7 +320,10 @@
         private bdd_voilierDataSetTableAdapters.ENTREPRISETableAdapter eNTREPRISETableAdapter;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private bdd_voilierDataSet_FINAL bdd_voilierDataSet_FINAL;
+        private System.Windows.Forms.BindingSource vOILIERBindingSource;
+        private bdd_voilierDataSet_FINALTableAdapters.VOILIERTableAdapter vOILIERTableAdapter;
     }
 }

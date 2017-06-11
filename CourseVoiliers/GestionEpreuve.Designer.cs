@@ -46,9 +46,7 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.ePREUVETableAdapter = new CourseVoiliers.bdd_voilierDataSetTableAdapters.EPREUVETableAdapter();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorEpreuve)).BeginInit();
             this.bindingNavigatorEpreuve.SuspendLayout();
@@ -195,35 +193,18 @@
             // 
             this.ePREUVETableAdapter.ClearBeforeFill = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceEpreuve, "Id_Epreuve", true));
-            this.textBox1.Location = new System.Drawing.Point(136, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            // 
             // textBox2
             // 
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceEpreuve, "Libelle", true));
-            this.textBox2.Location = new System.Drawing.Point(136, 126);
+            this.textBox2.Location = new System.Drawing.Point(128, 41);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Id épreuve";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 129);
+            this.label2.Location = new System.Drawing.Point(43, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 4;
@@ -233,11 +214,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(317, 263);
+            this.ClientSize = new System.Drawing.Size(317, 93);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.bindingNavigatorEpreuve);
             this.Name = "GestionEpreuve";
             this.Text = "Ajouter une épreuve";
@@ -270,9 +249,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private bdd_voilierDataSet bdd_voilierDataSet;
         private bdd_voilierDataSetTableAdapters.EPREUVETableAdapter ePREUVETableAdapter;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }
 }

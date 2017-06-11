@@ -39,7 +39,7 @@ namespace CourseVoiliers
         {
             SqlConnection con = new SqlConnection(@"Data Source = sqlserver.montpellier.epsi.fr, 4433; 
             Initial Catalog = bdd_voilier; Persist Security Info = True; User ID = alexis.ribot; Password = epsi951FTT;");
-            SqlDataAdapter sda = new SqlDataAdapter("select  from ClassementGeneral where Id_Course = '" + comboBox1.SelectedValue + "' order by [Temps réel] asc", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from ClassementGeneral where Id_Course = '" + comboBox1.SelectedValue + "' order by [Temps réel] asc", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
 
@@ -55,6 +55,10 @@ namespace CourseVoiliers
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
         }
     }
 }
